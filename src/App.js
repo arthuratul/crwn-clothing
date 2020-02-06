@@ -7,8 +7,9 @@ import {
     Route,
     BrowserRouter as Router
 } from 'react-router-dom';
-import ShopComponent from './pages/shop/shop.component';
 import Header from './components/header/header.component';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-out/sign-in-and-sign-out.component';
+import ShopPage from './pages/shop/shop.component';
 
 function App() {
     return (
@@ -17,7 +18,8 @@ function App() {
             <div className="App">
                 <Switch>
                     <Route exact path='/' component={Home}/>
-                    <Route exact path="/shop" component={ShopComponent}/>
+                    <Route exact path="/shop" component={ShopPage}/>
+                    <Route exact path="/signin" component={SignInAndSignUpPage}/>
                 </Switch>
             </div>
         </Router>
